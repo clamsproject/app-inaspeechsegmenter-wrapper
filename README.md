@@ -1,1 +1,1 @@
-# app-audio-segmenter
+# app-ina-segmenter
