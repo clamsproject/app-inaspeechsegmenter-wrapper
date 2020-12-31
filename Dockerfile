@@ -1,22 +1,36 @@
-FROM clamsproject/clams-python:0.1.8
+FROM nvidia/cuda:11.1-cudnn8-runtime-ubuntu18.04
 
-LABEL maintainer="Angus L'Herrou <piraka@brandeis.edu>"
+LABEL maintainer="CLAMS Team <admin@clams.ai>"
 
-RUN apt-get update && apt-get install -y ffmpeg && apt-get install perl
+# Install package app dependencies
+RUN apt-get update && \
+    apt-get install -y \
+        git \
+        python3-dev \
+        python3-pip \
+        ffmpeg \
+        perl
+
+# Upgrade pip to latest version (pip version must be >19.0 for tensorflow 2)
+RUN python3 -m pip install --upgrade pip
 
 RUN mkdir /segmenter
 COPY . /segmenter
 WORKDIR /segmenter
 
-RUN echo "["$(ffmpeg -loglevel quiet -demuxers | awk '$1 == "D" {print "\""$2"\""}' | perl -pe 'chomp if eof' | tr '\n' ',')"]" > demuxers.json
+# Regenerate supported file types for currently installed ffmpeg version
+RUN echo "["$(ffmpeg -loglevel quiet -demuxers | awk '$1 == "D" {print "\"""."$2"\""}' | perl -pe 'chomp if eof' | tr '\n' ',')"]" > demuxers.json
 
 RUN mkdir ./data
 
-RUN pip install -r requirements.txt
+# Install python app dependencies
+RUN python3 -m pip install -r requirements.txt
 
-RUN git clone --depth 1 --branch v0.1.0 https://github.com/clamsproject/app-audio-segmenter.git app_audio_segmenter
+# Clone base segmenter into ./app_audio_segmenter/
+RUN git clone --depth 1 --branch 1.1 https://github.com/clamsproject/app-audio-segmenter.git app_audio_segmenter
 
-RUN pip install -r ./app_audio_segmenter/requirements.txt
+# Catch any stray app dependencies from the base segmenter
+RUN python3 -m pip install -r ./app_audio_segmenter/requirements.txt
 
-ENTRYPOINT ["python"]
+ENTRYPOINT ["python3"]
 CMD ["app.py"]
