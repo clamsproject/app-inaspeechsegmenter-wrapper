@@ -1,107 +1,73 @@
-# app-ina-segmenter version 0.1.0
-# author: Angus L'Herrou
-# org: CLAMS team
 import argparse
-import json
-import os
-import csv
-from io import StringIO
+from typing import Union
 
 from clams import Restifier
-from mmif import DocumentTypes, AnnotationTypes
+from clams.app import ClamsApp
+from clams.appmetadata import AppMetadata
+from inaSpeechSegmenter import Segmenter
+from mmif import DocumentTypes, AnnotationTypes, Mmif
 
-from inaSpeechSegmenter import Segmenter, seg2csv
-
-import app_audio_segmenter.app
-from app_audio_segmenter.app import Segmenter as ClamsSegmenter
-
-
-APP_VERSION = '0.1.0'
-WRAPPED_IMAGE = 'nvidia/cuda:11.1-cudnn8-runtime-ubuntu18.04'
+__version__ = '0.2.0'
 MEDIA_DIRECTORY = '/segmenter/data'
 CSV_DIRECTORY = '/segmenter/csv'
-with open('demuxers.json', encoding='utf8') as demuxers:
-    SEGMENTER_ACCEPTED_EXTENSIONS = set(json.load(demuxers))
-    app_audio_segmenter.app.SEGMENTER_ACCEPTED_EXTENSIONS = SEGMENTER_ACCEPTED_EXTENSIONS
 
 
-class InaSegmenter(ClamsSegmenter):
-    def setupmetadata(self) -> dict:
-        return {
-            "name": "inaSpeechSegmenter Audio Segmenter",
-            "description": "tbd",
-            "vendor": "Team CLAMS",
-            "iri": f"http://mmif.clams.ai/apps/ina-segmenter/{APP_VERSION}",
-            "wrappee": WRAPPED_IMAGE,
-            "requires": [DocumentTypes.AudioDocument.value],
-            "produces": [
-                AnnotationTypes.TimeFrame.value
-            ]
-        }
+class InaSegmenter(ClamsApp):
 
-    @staticmethod
-    def segment(save_tsv=False) -> str:
-        seg = Segmenter(detect_gender=False)
-        files = os.listdir(MEDIA_DIRECTORY)
-        if save_tsv:
-            os.makedirs(CSV_DIRECTORY, exist_ok=True)
-            for file in os.listdir(CSV_DIRECTORY):
-                os.unlink(file)
+    def _appmetadata(self):
+        metadata = AppMetadata(
+            name="inaSpeechSegmenter Wrapper",
+            description="inaSpeechSegmenter is a CNN-based audio segmentation toolkit. The original software can be "
+                        "found at https://github.com/ina-foss/inaSpeechSegmenter .",
+            app_version=__version__,
+            wrappee_version='0.6.7',
+            license='MIT',
+            identifier=f"http://apps.clams.ai/inaaudiosegmenter-wrapper/{__version__}",
+        )
+        metadata.add_input(DocumentTypes.AudioDocument)
+        metadata.add_output(AnnotationTypes.TimeFrame)
+        return metadata
 
-        result = StringIO()
-        writer = csv.writer(result, delimiter='\t')
+    def _annotate(self, mmif: Union[str, dict, Mmif], **runtime_params) -> Mmif:
+        if not isinstance(mmif, Mmif):
+            mmif = Mmif(mmif)
 
-        for file in files:
-            abs_file_name = os.path.join(MEDIA_DIRECTORY, file)
-            segmentation = seg(abs_file_name)
-            if save_tsv:
-                seg2csv(segmentation, os.path.join(CSV_DIRECTORY, f'{file}.csv'))
-            out_row = [abs_file_name]
-            for row in segmentation:
-                if row[0] == 'speech':
-                    out_row.extend([row[1], row[2]])
-            out_row.append('speech_ratio: 0% (0 / 0)')  # we don't care about speech ratio
-            writer.writerow(out_row)
+        # prep ina 
+        ina = Segmenter()
 
-        result_str = result.getvalue()
-        if save_tsv:
-            with open(os.path.join(CSV_DIRECTORY, 'segmented.tsv'), 'w', encoding='utf8') as tsv:
-                print(result_str, file=tsv)
+        # get AudioDocuments with locations
+        for audiodoc in [document for document in mmif.documents
+                         if document.at_type == DocumentTypes.AudioDocument
+                            and len(document.location) > 0]:
+            filename = audiodoc.location_path()
+            segments = ina(filename)
 
-        return result_str
+            v = mmif.new_view()
+            self.sign_view(v)
+            v.new_contain(AnnotationTypes.TimeFrame, {'unit': 'milliseconds',
+                                                      'document': audiodoc.id})
+            for label, start_sec, end_sec in segments:
+                a = v.new_annotation(AnnotationTypes.TimeFrame)
+
+                a.add_property('start', start_sec * 1000)
+                a.add_property('end', end_sec * 1000)
+                if label == 'male' or label == 'female':
+                    a.add_property('gender', label)
+                    a.add_property('frameType', 'speech')
+                else:
+                    a.add_property('frameType', label)
+        return mmif
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--once',
-                        type=str,
-                        metavar='PATH',
-                        help='Use this flag if you want to run the segmenter on a path you specify, instead of running '
-                             'the Flask app.')
-    parser.add_argument('--pretty',
-                        action='store_true',
-                        help='Use this flag to return "pretty" (indented) MMIF data.')
-    parser.add_argument('--save-tsv',
-                        action='store_true',
-                        help='Use this flag to preserve the intermediary TSV file '
-                             'generated by the segmenter.')
-
+    parser.add_argument('--production',
+                        action='store_true')
     parsed_args = parser.parse_args()
 
-    if parsed_args.once:
-        with open(parsed_args.once) as mmif_in:
-            mmif_str = mmif_in.read()
-
-        ina_app = InaSegmenter()
-
-        mmif_out = ina_app.annotate(mmif_str, save_tsv=parsed_args.save_tsv, pretty=parsed_args.pretty)
-        with open('mmif_out.json', 'w') as out_file:
-            out_file.write(mmif_out)
+    segmenter_app = InaSegmenter()
+    segmenter_service = Restifier(segmenter_app)
+    if parsed_args.production:
+        segmenter_service.serve_production()
     else:
-        ina_app = InaSegmenter()
-        annotate = ina_app.annotate
-        ina_app.annotate = lambda *args, **kwargs: annotate(*args,
-                                                            save_tsv=parsed_args.save_tsv,
-                                                            pretty=parsed_args.pretty)
-        ina_service = Restifier(ina_app)
-        ina_service.run()
+        segmenter_service.run()
