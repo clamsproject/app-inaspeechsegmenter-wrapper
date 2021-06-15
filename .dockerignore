@@ -2,7 +2,3 @@
 .gitignore
 .dockerignore
 Dockerfile
-app_audio_segmenter/
-demuxers.json
-demo/results/
-demo/results-old/
