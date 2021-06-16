@@ -7,10 +7,7 @@ from clams.appmetadata import AppMetadata
 from inaSpeechSegmenter import Segmenter
 from mmif import DocumentTypes, AnnotationTypes, Mmif
 
-__version__ = '0.2.0'
-MEDIA_DIRECTORY = '/segmenter/data'
-CSV_DIRECTORY = '/segmenter/csv'
-
+__version__ = '0.2.1'
 
 class InaSegmenter(ClamsApp):
 
@@ -22,6 +19,7 @@ class InaSegmenter(ClamsApp):
             app_version=__version__,
             wrappee_version='0.6.7',
             license='MIT',
+            wrappee_license='MIT',
             identifier=f"http://apps.clams.ai/inaaudiosegmenter-wrapper/{__version__}",
         )
         metadata.add_input(DocumentTypes.AudioDocument)
@@ -44,13 +42,13 @@ class InaSegmenter(ClamsApp):
 
             v = mmif.new_view()
             self.sign_view(v)
-            v.new_contain(AnnotationTypes.TimeFrame, {'unit': 'milliseconds',
+            v.new_contain(AnnotationTypes.TimeFrame, {'timeUnit': 'milliseconds',
                                                       'document': audiodoc.id})
             for label, start_sec, end_sec in segments:
                 a = v.new_annotation(AnnotationTypes.TimeFrame)
 
-                a.add_property('start', start_sec * 1000)
-                a.add_property('end', end_sec * 1000)
+                a.add_property('start', int(start_sec * 1000))
+                a.add_property('end', int(end_sec * 1000))
                 if label == 'male' or label == 'female':
                     a.add_property('gender', label)
                     a.add_property('frameType', 'speech')

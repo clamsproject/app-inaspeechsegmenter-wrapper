@@ -1,7 +1,5 @@
 # INA-Segmenter for CLAMS
 
-#### v0.2.0
-
 This is a CLAMS app that wraps the [inaSpeechSegmenter tool](https://github.com/ina-foss/inaSpeechSegmenter).
 
 
@@ -24,7 +22,7 @@ For other OSs, please refer to the supported package managers to install system 
 Install dependencies using [`requirements.txt`](requirements.txt).
 
 ``` bash
-pip install -rr requirements.txt
+pip install -r requirements.txt
 ```
 
 ### Usage
