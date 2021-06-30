@@ -7,7 +7,8 @@ from clams.appmetadata import AppMetadata
 from inaSpeechSegmenter import Segmenter
 from mmif import DocumentTypes, AnnotationTypes, Mmif
 
-__version__ = '0.2.1'
+__version__ = '0.2.2'
+
 
 class InaSegmenter(ClamsApp):
 
@@ -29,6 +30,7 @@ class InaSegmenter(ClamsApp):
     def _annotate(self, mmif: Union[str, dict, Mmif], **runtime_params) -> Mmif:
         if not isinstance(mmif, Mmif):
             mmif = Mmif(mmif)
+        conf = self.get_configuration(**runtime_params)
 
         # prep ina 
         ina = Segmenter()
@@ -41,7 +43,7 @@ class InaSegmenter(ClamsApp):
             segments = ina(filename)
 
             v = mmif.new_view()
-            self.sign_view(v)
+            self.sign_view(v, conf)
             v.new_contain(AnnotationTypes.TimeFrame, {'timeUnit': 'milliseconds',
                                                       'document': audiodoc.id})
             for label, start_sec, end_sec in segments:
