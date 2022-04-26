@@ -7,7 +7,7 @@ from clams.appmetadata import AppMetadata
 from inaSpeechSegmenter import Segmenter
 from mmif import DocumentTypes, AnnotationTypes, Mmif
 
-__version__ = '0.2.3'
+__version__ = '0.2.4'
 
 
 class InaSegmenter(ClamsApp):
@@ -18,9 +18,10 @@ class InaSegmenter(ClamsApp):
             description="inaSpeechSegmenter is a CNN-based audio segmentation toolkit. The original software can be "
                         "found at https://github.com/ina-foss/inaSpeechSegmenter .",
             app_version=__version__,
-            wrappee_version='0.6.7',
-            license='MIT',
-            wrappee_license='MIT',
+            app_license='MIT',
+            analyzer_version='0.6.7',
+            analyzer_license='MIT',
+            url='https://github.com/clamsproject/app-inaspeechsegmenter-wrapper/tree/main',
             identifier=f"http://apps.clams.ai/inaaudiosegmenter-wrapper/{__version__}",
         )
         metadata.add_input(DocumentTypes.AudioDocument)
@@ -37,15 +38,13 @@ class InaSegmenter(ClamsApp):
 
         # get AudioDocuments with locations
         for audiodoc in [document for document in mmif.documents
-                         if document.at_type == DocumentTypes.AudioDocument
-                            and len(document.location) > 0]:
+                         if document.at_type == DocumentTypes.AudioDocument and len(document.location) > 0]:
             filename = audiodoc.location_path()
             segments = ina(filename)
 
             v = mmif.new_view()
             self.sign_view(v, conf)
-            v.new_contain(AnnotationTypes.TimeFrame, **{'timeUnit': 'milliseconds',
-                                                        'document': audiodoc.id})
+            v.new_contain(AnnotationTypes.TimeFrame, timeUnit='milliseconds', document=audiodoc.id)
             for label, start_sec, end_sec in segments:
                 a = v.new_annotation(AnnotationTypes.TimeFrame)
 
