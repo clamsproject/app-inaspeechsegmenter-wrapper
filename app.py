@@ -1,4 +1,5 @@
 import argparse
+import logging
 from typing import Union
 
 from clams import Restifier
@@ -46,9 +47,7 @@ class INASSWrapper(ClamsApp):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--port", action="store", default="5000", help="set port to listen"
-    )
+    parser.add_argument("--port", action="store", default="5000", help="set port to listen")
     parser.add_argument("--production", action="store_true", help="run gunicorn server")
 
     parsed_args = parser.parse_args()
@@ -58,4 +57,5 @@ if __name__ == "__main__":
     if parsed_args.production:
         segmenter_app.serve_production()
     else:
+        app.logger.setLevel(logging.DEBUG)
         segmenter_app.run()

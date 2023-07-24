@@ -1,13 +1,15 @@
-
-
 # INA-Segmenter for CLAMS
+
+## Description
 
 This is a CLAMS app that wraps the [inaSpeechSegmenter tool](https://github.com/ina-foss/inaSpeechSegmenter).
 
+## User instruction
 
-### Requirement
+General user instructions for CLAMS apps is available at [CLAMS Apps documentation](https://apps.clams.ai/clamsapp).
 
-#### system packages
+### System requirements
+
 * libsndfile
 * ffmpeg
 
@@ -19,7 +21,7 @@ apt install ffmpeg libsndfile1
 
 For other OSs, please refer to the supported package managers to install system libraries.
 
-#### python packages 
+### Python packages
 
 Install dependencies using [`requirements.txt`](requirements.txt).
 
@@ -33,7 +35,3 @@ If you encounter an `AttributeError` from `module 'keras.utils.generic_utils'`, 
 pip uninstall -y keras keras-nightly
 pip install --upgrade --force-reinstall $(grep tensorflow requirements.txt)
 ```
-
-### Usage
-
-General user instruction for CLAMS apps is available at [CLAMS Apps documentation](https://apps.clams.ai/clamsapp/).

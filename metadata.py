@@ -36,4 +36,3 @@ if __name__ == '__main__':
     for param in ClamsApp.universal_parameters:
         metadata.add_parameter(**param)
     sys.stdout.write(metadata.jsonify(pretty=True))
-
