@@ -57,5 +57,5 @@ if __name__ == "__main__":
     if parsed_args.production:
         segmenter_app.serve_production()
     else:
-        app.logger.setLevel(logging.DEBUG)
+        segmenter.logger.setLevel(logging.DEBUG)
         segmenter_app.run()
