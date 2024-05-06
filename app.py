@@ -1,10 +1,8 @@
 import argparse
 import logging
-from typing import Union
 
 from clams import Restifier
 from clams.app import ClamsApp
-from clams.appmetadata import AppMetadata
 from inaSpeechSegmenter import Segmenter
 from mmif import DocumentTypes, AnnotationTypes, Mmif
 
@@ -16,22 +14,21 @@ class INASSWrapper(ClamsApp):
     def _appmetadata(self):
         pass
 
-    def _annotate(self, mmif: Union[str, dict, Mmif], **runtime_params) -> Mmif:
+    def _annotate(self, mmif: Mmif, **parameters) -> Mmif:
         if not isinstance(mmif, Mmif):
             mmif = Mmif(mmif)
-        conf = self.get_configuration(**runtime_params)
 
         # prep ina 
         ina = Segmenter()
 
         # get AudioDocuments with locations
-        for media in mmif.get_documents_by_type(DocumentTypes.AudioDocument) + mmif.get_documents_by_type(DocumentTypes.VideoDocument):
-            filename = media.location_path()
+        for document in mmif.get_documents_by_type(DocumentTypes.AudioDocument) + mmif.get_documents_by_type(DocumentTypes.VideoDocument):
+            filename = document.location_path()
             segments = ina(filename)
 
             v = mmif.new_view()
-            self.sign_view(v, conf)
-            v.new_contain(AnnotationTypes.TimeFrame, timeUnit=metadata.timeunit, document=media.id)
+            self.sign_view(v, parameters)
+            v.new_contain(AnnotationTypes.TimeFrame, timeUnit=metadata.timeunit, document=document.id)
             for label, start_sec, end_sec in segments:
                 a = v.new_annotation(AnnotationTypes.TimeFrame)
 
@@ -45,6 +42,15 @@ class INASSWrapper(ClamsApp):
         return mmif
 
 
+def get_app():
+    """
+    This function effectively creates an instance of the app class, without any arguments passed in, meaning, any 
+    external information such as initial app configuration should be set without using function arguments. The easiest
+    way to do this is to set global variables before calling this. 
+    """
+    return INASSWrapper()
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--port", action="store", default="5000", help="set port to listen")
@@ -52,10 +58,16 @@ if __name__ == "__main__":
 
     parsed_args = parser.parse_args()
 
-    segmenter = INASSWrapper()
-    segmenter_app = Restifier(segmenter, port=parsed_args.port)
+    # create the app instance
+    # if get_app() call requires any "configurations", they should be set now as global variables
+    # and referenced in the get_app() function. NOTE THAT you should not change the signature of get_app()
+    app = get_app()
+
+    http_app = Restifier(app, port=int(parsed_args.port))
+    # for running the application in production mode
     if parsed_args.production:
-        segmenter_app.serve_production()
+        http_app.serve_production()
+    # development mode
     else:
-        segmenter.logger.setLevel(logging.DEBUG)
-        segmenter_app.run()
+        app.logger.setLevel(logging.DEBUG)
+        http_app.run()
