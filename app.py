@@ -30,6 +30,9 @@ class INASSWrapper(ClamsApp):
             self.sign_view(v, parameters)
             v.new_contain(AnnotationTypes.TimeFrame, timeUnit=metadata.timeunit, document=document.id)
             for label, start_sec, end_sec in segments:
+                duration = (end_sec - start_sec) * 1000
+                if duration < parameters['minDuration']:
+                    continue
                 a = v.new_annotation(AnnotationTypes.TimeFrame)
 
                 a.add_property('start', int(start_sec * 1000))

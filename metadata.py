@@ -26,6 +26,9 @@ def appmetadata() -> AppMetadata:
     )
     metadata.add_input_oneof(DocumentTypes.AudioDocument, DocumentTypes.VideoDocument)
     metadata.add_output(AnnotationTypes.TimeFrame, timeunit=timeunit)
+    metadata.add_parameter(
+        name='minDuration', type='integer', default=0,
+        description='minimum duration of a TimeFrame in milliseconds')
     return metadata
 
 
