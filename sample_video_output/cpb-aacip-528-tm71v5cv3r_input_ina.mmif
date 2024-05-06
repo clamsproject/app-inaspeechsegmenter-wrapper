@@ -1,0 +1,291 @@
+{
+  "metadata": {
+    "mmif": "http://mmif.clams.ai/0.4.0"
+  },
+  "documents": [
+    {
+      "@type": "http://mmif.clams.ai/0.4.0/vocabulary/AudioDocument",
+      "properties": {
+        "mime": "audio",
+        "id": "d1",
+        "location": "file:///Users/Brenda/Documents/GitHub/app-inaspeechsegmenter-wrapper/sample_videos/cpb-aacip-528-tm71v5cv3r.mp4"
+      }
+    }
+  ],
+  "views": [
+    {
+      "id": "v_0",
+      "metadata": {
+        "timestamp": "2024-04-30T14:13:59.786559",
+        "app": "http://apps.clams.ai/inaspeechsegmenter-wrapper/v1.1",
+        "contains": {
+          "http://mmif.clams.ai/vocabulary/TimeFrame/v5": {
+            "timeUnit": "milliseconds",
+            "document": "d1"
+          }
+        },
+        "parameters": {
+          "pretty": ""
+        },
+        "appConfiguration": {
+          "pretty": true
+        }
+      },
+      "annotations": [
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 0,
+            "end": 5740,
+            "frameType": "noise",
+            "id": "tf_1"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 5740,
+            "end": 21020,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_2"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 21020,
+            "end": 35160,
+            "frameType": "noise",
+            "id": "tf_3"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 35160,
+            "end": 48460,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_4"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 48460,
+            "end": 54920,
+            "frameType": "noise",
+            "id": "tf_5"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 54920,
+            "end": 83380,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_6"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 83380,
+            "end": 94620,
+            "frameType": "noise",
+            "id": "tf_7"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 94620,
+            "end": 97840,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_8"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 97840,
+            "end": 100380,
+            "frameType": "noise",
+            "id": "tf_9"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 100380,
+            "end": 103720,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_10"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 103720,
+            "end": 107460,
+            "frameType": "noise",
+            "id": "tf_11"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 107460,
+            "end": 126440,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_12"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 126440,
+            "end": 129660,
+            "frameType": "noise",
+            "id": "tf_13"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 129660,
+            "end": 158020,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_14"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 158020,
+            "end": 165120,
+            "frameType": "noise",
+            "id": "tf_15"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 165120,
+            "end": 170660,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_16"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 170660,
+            "end": 173700,
+            "frameType": "noise",
+            "id": "tf_17"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 173700,
+            "end": 192840,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_18"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 192840,
+            "end": 195640,
+            "frameType": "noise",
+            "id": "tf_19"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 195640,
+            "end": 241920,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_20"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 241920,
+            "end": 721180,
+            "frameType": "noise",
+            "id": "tf_21"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 721180,
+            "end": 734100,
+            "frameType": "music",
+            "id": "tf_22"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 734100,
+            "end": 1991060,
+            "frameType": "noise",
+            "id": "tf_23"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1991060,
+            "end": 1992080,
+            "frameType": "noEnergy",
+            "id": "tf_24"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1992080,
+            "end": 1995300,
+            "frameType": "noise",
+            "id": "tf_25"
+          }
+        }
+      ]
+    },
+    {
+      "id": "v_1",
+      "metadata": {
+        "timestamp": "2024-04-30T14:13:59.787045",
+        "app": "http://apps.clams.ai/inaspeechsegmenter-wrapper/v1.1",
+        "parameters": {
+          "pretty": ""
+        },
+        "warnings": [
+          "{message : DeprecationWarning('ClamsApp.get_configuration() is deprecated. If you are using this method in `_annotate()` method,it is no longer needed since `clams-python>1.0.9`.'), category : 'DeprecationWarning', filename : '/Users/Brenda/Documents/GitHub/app-inaspeechsegmenter-wrapper/app.py', lineno : 22, line : None}",
+          "{message : FutureWarning('arrays to stack must be passed as a \"sequence\" type such as list or tuple. Support for non-sequence iterables such as generators is deprecated as of NumPy 1.16 and will raise an error in the future.'), category : 'FutureWarning', filename : '/Users/Brenda/Library/Python/3.9/lib/python/site-packages/pyannote/algorithms/utils/viterbi.py', lineno : 86, line : None}",
+          "{message : FutureWarning('arrays to stack must be passed as a \"sequence\" type such as list or tuple. Support for non-sequence iterables such as generators is deprecated as of NumPy 1.16 and will raise an error in the future.'), category : 'FutureWarning', filename : '/Users/Brenda/Library/Python/3.9/lib/python/site-packages/pyannote/algorithms/utils/viterbi.py', lineno : 95, line : None}",
+          "{message : RuntimeWarning('invalid value encountered in subtract'), category : 'RuntimeWarning', filename : '/Users/Brenda/Library/Python/3.9/lib/python/site-packages/inaSpeechSegmenter/segmenter.py', lineno : 62, line : None}",
+          "{message : RuntimeWarning('invalid value encountered in subtract'), category : 'RuntimeWarning', filename : '/Users/Brenda/Library/Python/3.9/lib/python/site-packages/numpy/core/_methods.py', lineno : 236, line : None}"
+        ]
+      },
+      "annotations": []
+    }
+  ]
+}

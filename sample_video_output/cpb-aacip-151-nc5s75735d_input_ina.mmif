@@ -1,0 +1,2546 @@
+{
+  "metadata": {
+    "mmif": "http://mmif.clams.ai/0.4.0"
+  },
+  "documents": [
+    {
+      "@type": "http://mmif.clams.ai/0.4.0/vocabulary/AudioDocument",
+      "properties": {
+        "mime": "audio",
+        "id": "d1",
+        "location": "file:///Users/Brenda/Documents/GitHub/app-inaspeechsegmenter-wrapper/sample_videos/cpb-aacip-151-nc5s75735d.mp4"
+      }
+    }
+  ],
+  "views": [
+    {
+      "id": "v_0",
+      "metadata": {
+        "timestamp": "2024-04-30T13:52:10.762764",
+        "app": "http://apps.clams.ai/inaspeechsegmenter-wrapper/v1.1",
+        "contains": {
+          "http://mmif.clams.ai/vocabulary/TimeFrame/v5": {
+            "timeUnit": "milliseconds",
+            "document": "d1"
+          }
+        },
+        "parameters": {
+          "pretty": ""
+        },
+        "appConfiguration": {
+          "pretty": true
+        }
+      },
+      "annotations": [
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 0,
+            "end": 19120,
+            "frameType": "noEnergy",
+            "id": "tf_1"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 19120,
+            "end": 21120,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_2"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 21120,
+            "end": 29100,
+            "frameType": "noise",
+            "id": "tf_3"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 29100,
+            "end": 40900,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_4"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 40900,
+            "end": 41600,
+            "frameType": "noEnergy",
+            "id": "tf_5"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 41600,
+            "end": 131320,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_6"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 131320,
+            "end": 131720,
+            "frameType": "noEnergy",
+            "id": "tf_7"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 131720,
+            "end": 135040,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_8"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 135040,
+            "end": 137060,
+            "frameType": "noEnergy",
+            "id": "tf_9"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 137060,
+            "end": 143100,
+            "gender": "female",
+            "frameType": "speech",
+            "id": "tf_10"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 143100,
+            "end": 147620,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_11"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 147620,
+            "end": 148920,
+            "frameType": "noEnergy",
+            "id": "tf_12"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 148920,
+            "end": 173620,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_13"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 173620,
+            "end": 174000,
+            "frameType": "noEnergy",
+            "id": "tf_14"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 174000,
+            "end": 178520,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_15"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 178520,
+            "end": 178980,
+            "frameType": "noEnergy",
+            "id": "tf_16"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 178980,
+            "end": 184000,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_17"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 184000,
+            "end": 184640,
+            "frameType": "noEnergy",
+            "id": "tf_18"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 184640,
+            "end": 202860,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_19"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 202860,
+            "end": 203320,
+            "frameType": "noEnergy",
+            "id": "tf_20"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 203320,
+            "end": 220740,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_21"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 220740,
+            "end": 221400,
+            "frameType": "noEnergy",
+            "id": "tf_22"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 221400,
+            "end": 223120,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_23"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 223120,
+            "end": 223520,
+            "frameType": "noEnergy",
+            "id": "tf_24"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 223520,
+            "end": 256920,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_25"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 256920,
+            "end": 257519,
+            "frameType": "noEnergy",
+            "id": "tf_26"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 257519,
+            "end": 260000,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_27"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 260000,
+            "end": 260440,
+            "frameType": "noEnergy",
+            "id": "tf_28"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 260440,
+            "end": 281480,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_29"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 281480,
+            "end": 282320,
+            "frameType": "noEnergy",
+            "id": "tf_30"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 282320,
+            "end": 286220,
+            "gender": "female",
+            "frameType": "speech",
+            "id": "tf_31"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 286220,
+            "end": 294660,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_32"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 294660,
+            "end": 295300,
+            "frameType": "noEnergy",
+            "id": "tf_33"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 295300,
+            "end": 307040,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_34"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 307040,
+            "end": 307480,
+            "frameType": "noEnergy",
+            "id": "tf_35"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 307480,
+            "end": 308280,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_36"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 308280,
+            "end": 310680,
+            "frameType": "noEnergy",
+            "id": "tf_37"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 310680,
+            "end": 313840,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_38"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 313840,
+            "end": 315020,
+            "frameType": "noEnergy",
+            "id": "tf_39"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 315020,
+            "end": 323740,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_40"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 323740,
+            "end": 324620,
+            "frameType": "noEnergy",
+            "id": "tf_41"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 324620,
+            "end": 328140,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_42"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 328140,
+            "end": 328740,
+            "frameType": "noEnergy",
+            "id": "tf_43"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 328740,
+            "end": 331820,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_44"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 331820,
+            "end": 332300,
+            "frameType": "noEnergy",
+            "id": "tf_45"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 332300,
+            "end": 346760,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_46"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 346760,
+            "end": 347400,
+            "frameType": "noEnergy",
+            "id": "tf_47"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 347400,
+            "end": 362780,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_48"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 362780,
+            "end": 363200,
+            "frameType": "noEnergy",
+            "id": "tf_49"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 363200,
+            "end": 365520,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_50"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 365520,
+            "end": 366080,
+            "frameType": "noEnergy",
+            "id": "tf_51"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 366080,
+            "end": 389680,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_52"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 389680,
+            "end": 390640,
+            "frameType": "noEnergy",
+            "id": "tf_53"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 390640,
+            "end": 396380,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_54"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 396380,
+            "end": 400340,
+            "gender": "female",
+            "frameType": "speech",
+            "id": "tf_55"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 400340,
+            "end": 409440,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_56"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 409440,
+            "end": 410500,
+            "frameType": "noEnergy",
+            "id": "tf_57"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 410500,
+            "end": 424940,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_58"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 424940,
+            "end": 425640,
+            "frameType": "noEnergy",
+            "id": "tf_59"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 425640,
+            "end": 432840,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_60"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 432840,
+            "end": 433860,
+            "frameType": "noEnergy",
+            "id": "tf_61"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 433860,
+            "end": 435840,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_62"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 435840,
+            "end": 436420,
+            "frameType": "noEnergy",
+            "id": "tf_63"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 436420,
+            "end": 443080,
+            "gender": "female",
+            "frameType": "speech",
+            "id": "tf_64"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 443080,
+            "end": 449500,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_65"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 449500,
+            "end": 450180,
+            "frameType": "noEnergy",
+            "id": "tf_66"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 450180,
+            "end": 469880,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_67"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 469880,
+            "end": 470320,
+            "frameType": "noEnergy",
+            "id": "tf_68"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 470320,
+            "end": 471480,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_69"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 471480,
+            "end": 471920,
+            "frameType": "noEnergy",
+            "id": "tf_70"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 471920,
+            "end": 472220,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_71"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 472220,
+            "end": 473580,
+            "frameType": "noEnergy",
+            "id": "tf_72"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 473580,
+            "end": 489580,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_73"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 489580,
+            "end": 491000,
+            "frameType": "noEnergy",
+            "id": "tf_74"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 491000,
+            "end": 511080,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_75"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 511080,
+            "end": 511960,
+            "frameType": "noEnergy",
+            "id": "tf_76"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 511960,
+            "end": 515400,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_77"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 515400,
+            "end": 516159,
+            "frameType": "noEnergy",
+            "id": "tf_78"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 516159,
+            "end": 517159,
+            "frameType": "noise",
+            "id": "tf_79"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 517159,
+            "end": 518080,
+            "frameType": "noEnergy",
+            "id": "tf_80"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 518080,
+            "end": 519880,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_81"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 519880,
+            "end": 520280,
+            "frameType": "noEnergy",
+            "id": "tf_82"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 520280,
+            "end": 532660,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_83"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 532660,
+            "end": 533800,
+            "frameType": "noEnergy",
+            "id": "tf_84"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 533800,
+            "end": 534560,
+            "frameType": "noise",
+            "id": "tf_85"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 534560,
+            "end": 535160,
+            "frameType": "noEnergy",
+            "id": "tf_86"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 535160,
+            "end": 540400,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_87"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 540400,
+            "end": 542100,
+            "frameType": "noEnergy",
+            "id": "tf_88"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 542100,
+            "end": 542380,
+            "frameType": "noise",
+            "id": "tf_89"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 542380,
+            "end": 545060,
+            "frameType": "noEnergy",
+            "id": "tf_90"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 545060,
+            "end": 546320,
+            "gender": "female",
+            "frameType": "speech",
+            "id": "tf_91"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 546320,
+            "end": 555060,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_92"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 555060,
+            "end": 555500,
+            "frameType": "noEnergy",
+            "id": "tf_93"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 555500,
+            "end": 583460,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_94"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 583460,
+            "end": 584760,
+            "frameType": "noEnergy",
+            "id": "tf_95"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 584760,
+            "end": 611440,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_96"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 611440,
+            "end": 612060,
+            "frameType": "noEnergy",
+            "id": "tf_97"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 612060,
+            "end": 623120,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_98"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 623120,
+            "end": 623660,
+            "frameType": "noEnergy",
+            "id": "tf_99"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 623660,
+            "end": 631760,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_100"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 631760,
+            "end": 632200,
+            "frameType": "noEnergy",
+            "id": "tf_101"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 632200,
+            "end": 635240,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_102"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 635240,
+            "end": 635840,
+            "frameType": "noEnergy",
+            "id": "tf_103"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 635840,
+            "end": 643040,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_104"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 643040,
+            "end": 643420,
+            "frameType": "noEnergy",
+            "id": "tf_105"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 643420,
+            "end": 668540,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_106"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 668540,
+            "end": 669260,
+            "frameType": "noEnergy",
+            "id": "tf_107"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 669260,
+            "end": 675740,
+            "gender": "female",
+            "frameType": "speech",
+            "id": "tf_108"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 675740,
+            "end": 678320,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_109"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 678320,
+            "end": 680780,
+            "gender": "female",
+            "frameType": "speech",
+            "id": "tf_110"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 680780,
+            "end": 681820,
+            "frameType": "noEnergy",
+            "id": "tf_111"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 681820,
+            "end": 686620,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_112"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 686620,
+            "end": 687620,
+            "frameType": "noEnergy",
+            "id": "tf_113"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 687620,
+            "end": 702640,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_114"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 702640,
+            "end": 705120,
+            "frameType": "noise",
+            "id": "tf_115"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 705120,
+            "end": 709640,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_116"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 709640,
+            "end": 712560,
+            "frameType": "noEnergy",
+            "id": "tf_117"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 712560,
+            "end": 720880,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_118"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 720880,
+            "end": 723160,
+            "frameType": "noEnergy",
+            "id": "tf_119"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 723160,
+            "end": 723680,
+            "frameType": "noise",
+            "id": "tf_120"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 723680,
+            "end": 725180,
+            "frameType": "noEnergy",
+            "id": "tf_121"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 725180,
+            "end": 730260,
+            "frameType": "noise",
+            "id": "tf_122"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 730260,
+            "end": 733780,
+            "frameType": "noEnergy",
+            "id": "tf_123"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 733780,
+            "end": 737320,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_124"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 737320,
+            "end": 737720,
+            "frameType": "noEnergy",
+            "id": "tf_125"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 737720,
+            "end": 753900,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_126"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 753900,
+            "end": 754420,
+            "frameType": "noEnergy",
+            "id": "tf_127"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 754420,
+            "end": 765040,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_128"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 765040,
+            "end": 765420,
+            "frameType": "noEnergy",
+            "id": "tf_129"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 765420,
+            "end": 766620,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_130"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 766620,
+            "end": 767260,
+            "frameType": "noEnergy",
+            "id": "tf_131"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 767260,
+            "end": 796400,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_132"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 796400,
+            "end": 796880,
+            "frameType": "noEnergy",
+            "id": "tf_133"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 796880,
+            "end": 804760,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_134"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 804760,
+            "end": 805260,
+            "frameType": "noEnergy",
+            "id": "tf_135"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 805260,
+            "end": 818780,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_136"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 818780,
+            "end": 819200,
+            "frameType": "noEnergy",
+            "id": "tf_137"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 819200,
+            "end": 826500,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_138"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 826500,
+            "end": 827040,
+            "frameType": "noEnergy",
+            "id": "tf_139"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 827040,
+            "end": 827540,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_140"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 827540,
+            "end": 829020,
+            "gender": "female",
+            "frameType": "speech",
+            "id": "tf_141"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 829020,
+            "end": 835920,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_142"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 835920,
+            "end": 836380,
+            "frameType": "noEnergy",
+            "id": "tf_143"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 836380,
+            "end": 840580,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_144"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 840580,
+            "end": 843580,
+            "frameType": "noise",
+            "id": "tf_145"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 843580,
+            "end": 856460,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_146"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 856460,
+            "end": 859140,
+            "frameType": "noEnergy",
+            "id": "tf_147"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 859140,
+            "end": 863920,
+            "gender": "female",
+            "frameType": "speech",
+            "id": "tf_148"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 863920,
+            "end": 867320,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_149"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 867320,
+            "end": 870140,
+            "gender": "female",
+            "frameType": "speech",
+            "id": "tf_150"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 870140,
+            "end": 871540,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_151"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 871540,
+            "end": 873560,
+            "frameType": "noEnergy",
+            "id": "tf_152"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 873560,
+            "end": 895980,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_153"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 895980,
+            "end": 896700,
+            "frameType": "noEnergy",
+            "id": "tf_154"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 896700,
+            "end": 900580,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_155"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 900580,
+            "end": 901040,
+            "frameType": "noEnergy",
+            "id": "tf_156"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 901040,
+            "end": 902320,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_157"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 902320,
+            "end": 903820,
+            "frameType": "noEnergy",
+            "id": "tf_158"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 903820,
+            "end": 904820,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_159"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 904820,
+            "end": 907300,
+            "frameType": "noEnergy",
+            "id": "tf_160"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 907300,
+            "end": 907740,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_161"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 907740,
+            "end": 908880,
+            "frameType": "noEnergy",
+            "id": "tf_162"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 908880,
+            "end": 909380,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_163"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 909380,
+            "end": 910100,
+            "frameType": "noEnergy",
+            "id": "tf_164"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 910100,
+            "end": 913320,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_165"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 913320,
+            "end": 914260,
+            "frameType": "noEnergy",
+            "id": "tf_166"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 914260,
+            "end": 915180,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_167"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 915180,
+            "end": 916600,
+            "frameType": "noEnergy",
+            "id": "tf_168"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 916600,
+            "end": 931420,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_169"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 931420,
+            "end": 931860,
+            "frameType": "noEnergy",
+            "id": "tf_170"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 931860,
+            "end": 943260,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_171"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 943260,
+            "end": 943820,
+            "frameType": "noEnergy",
+            "id": "tf_172"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 943820,
+            "end": 948300,
+            "gender": "female",
+            "frameType": "speech",
+            "id": "tf_173"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 948300,
+            "end": 950900,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_174"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 950900,
+            "end": 951540,
+            "frameType": "noEnergy",
+            "id": "tf_175"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 951540,
+            "end": 953660,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_176"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 953660,
+            "end": 954080,
+            "frameType": "noEnergy",
+            "id": "tf_177"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 954080,
+            "end": 963980,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_178"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 963980,
+            "end": 964380,
+            "frameType": "noEnergy",
+            "id": "tf_179"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 964380,
+            "end": 970260,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_180"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 970260,
+            "end": 970760,
+            "frameType": "noEnergy",
+            "id": "tf_181"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 970760,
+            "end": 980460,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_182"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 980460,
+            "end": 980900,
+            "frameType": "noEnergy",
+            "id": "tf_183"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 980900,
+            "end": 994420,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_184"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 994420,
+            "end": 995460,
+            "frameType": "noEnergy",
+            "id": "tf_185"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 995460,
+            "end": 998660,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_186"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 998660,
+            "end": 999180,
+            "frameType": "noEnergy",
+            "id": "tf_187"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 999180,
+            "end": 1010700,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_188"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1010700,
+            "end": 1011180,
+            "frameType": "noEnergy",
+            "id": "tf_189"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1011180,
+            "end": 1032819,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_190"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1032819,
+            "end": 1033760,
+            "frameType": "noEnergy",
+            "id": "tf_191"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1033760,
+            "end": 1060240,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_192"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1060240,
+            "end": 1069400,
+            "gender": "female",
+            "frameType": "speech",
+            "id": "tf_193"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1069400,
+            "end": 1080900,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_194"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1080900,
+            "end": 1081400,
+            "frameType": "noEnergy",
+            "id": "tf_195"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1081400,
+            "end": 1102540,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_196"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1102540,
+            "end": 1103140,
+            "frameType": "noEnergy",
+            "id": "tf_197"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1103140,
+            "end": 1126360,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_198"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1126360,
+            "end": 1127100,
+            "frameType": "noEnergy",
+            "id": "tf_199"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1127100,
+            "end": 1129180,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_200"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1129180,
+            "end": 1129960,
+            "frameType": "noEnergy",
+            "id": "tf_201"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1129960,
+            "end": 1133240,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_202"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1133240,
+            "end": 1133920,
+            "frameType": "noEnergy",
+            "id": "tf_203"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1133920,
+            "end": 1134660,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_204"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1134660,
+            "end": 1138820,
+            "gender": "female",
+            "frameType": "speech",
+            "id": "tf_205"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1138820,
+            "end": 1140700,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_206"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1140700,
+            "end": 1141100,
+            "frameType": "noEnergy",
+            "id": "tf_207"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1141100,
+            "end": 1180800,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_208"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1180800,
+            "end": 1181520,
+            "frameType": "noEnergy",
+            "id": "tf_209"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1181520,
+            "end": 1185880,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_210"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1185880,
+            "end": 1186720,
+            "frameType": "noEnergy",
+            "id": "tf_211"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1186720,
+            "end": 1188260,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_212"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1188260,
+            "end": 1188760,
+            "frameType": "noEnergy",
+            "id": "tf_213"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1188760,
+            "end": 1191200,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_214"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1191200,
+            "end": 1191680,
+            "frameType": "noEnergy",
+            "id": "tf_215"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1191680,
+            "end": 1236780,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_216"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1236780,
+            "end": 1237220,
+            "frameType": "noEnergy",
+            "id": "tf_217"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1237220,
+            "end": 1242760,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_218"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1242760,
+            "end": 1243840,
+            "frameType": "noEnergy",
+            "id": "tf_219"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1243840,
+            "end": 1259080,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_220"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1259080,
+            "end": 1259580,
+            "frameType": "noEnergy",
+            "id": "tf_221"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1259580,
+            "end": 1265600,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_222"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1265600,
+            "end": 1266800,
+            "frameType": "noEnergy",
+            "id": "tf_223"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1266800,
+            "end": 1272600,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_224"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1272600,
+            "end": 1273700,
+            "frameType": "noEnergy",
+            "id": "tf_225"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1273700,
+            "end": 1277480,
+            "frameType": "noise",
+            "id": "tf_226"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1277480,
+            "end": 1278420,
+            "frameType": "noEnergy",
+            "id": "tf_227"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1278420,
+            "end": 1279840,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_228"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1279840,
+            "end": 1284880,
+            "frameType": "noise",
+            "id": "tf_229"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1284880,
+            "end": 1288840,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_230"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1288840,
+            "end": 1289940,
+            "frameType": "noise",
+            "id": "tf_231"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1289940,
+            "end": 1291300,
+            "frameType": "noEnergy",
+            "id": "tf_232"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1291300,
+            "end": 1297760,
+            "frameType": "noise",
+            "id": "tf_233"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1297760,
+            "end": 1300940,
+            "frameType": "noEnergy",
+            "id": "tf_234"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1300940,
+            "end": 1302140,
+            "gender": "female",
+            "frameType": "speech",
+            "id": "tf_235"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1302140,
+            "end": 1306560,
+            "frameType": "noise",
+            "id": "tf_236"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1306560,
+            "end": 1308140,
+            "frameType": "noEnergy",
+            "id": "tf_237"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1308140,
+            "end": 1315440,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_238"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1315440,
+            "end": 1315840,
+            "frameType": "noEnergy",
+            "id": "tf_239"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1315840,
+            "end": 1323780,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_240"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1323780,
+            "end": 1324180,
+            "frameType": "noEnergy",
+            "id": "tf_241"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1324180,
+            "end": 1325460,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_242"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1325460,
+            "end": 1325860,
+            "frameType": "noEnergy",
+            "id": "tf_243"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1325860,
+            "end": 1343880,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_244"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1343880,
+            "end": 1344700,
+            "frameType": "noEnergy",
+            "id": "tf_245"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1344700,
+            "end": 1351640,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_246"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1351640,
+            "end": 1352160,
+            "frameType": "noEnergy",
+            "id": "tf_247"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1352160,
+            "end": 1388380,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_248"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1388380,
+            "end": 1388780,
+            "frameType": "noEnergy",
+            "id": "tf_249"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1388780,
+            "end": 1421520,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_250"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1421520,
+            "end": 1422920,
+            "frameType": "noEnergy",
+            "id": "tf_251"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1422920,
+            "end": 1425540,
+            "gender": "female",
+            "frameType": "speech",
+            "id": "tf_252"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1425540,
+            "end": 1429460,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_253"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1429460,
+            "end": 1430080,
+            "frameType": "noEnergy",
+            "id": "tf_254"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1430080,
+            "end": 1433040,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_255"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1433040,
+            "end": 1433980,
+            "frameType": "noEnergy",
+            "id": "tf_256"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1433980,
+            "end": 1437760,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_257"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1437760,
+            "end": 1439320,
+            "frameType": "noEnergy",
+            "id": "tf_258"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1439320,
+            "end": 1444080,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_259"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1444080,
+            "end": 1445100,
+            "frameType": "noEnergy",
+            "id": "tf_260"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1445100,
+            "end": 1453680,
+            "gender": "male",
+            "frameType": "speech",
+            "id": "tf_261"
+          }
+        },
+        {
+          "@type": "http://mmif.clams.ai/vocabulary/TimeFrame/v5",
+          "properties": {
+            "start": 1453680,
+            "end": 1457640,
+            "frameType": "noEnergy",
+            "id": "tf_262"
+          }
+        }
+      ]
+    },
+    {
+      "id": "v_1",
+      "metadata": {
+        "timestamp": "2024-04-30T13:52:10.766246",
+        "app": "http://apps.clams.ai/inaspeechsegmenter-wrapper/v1.1",
+        "parameters": {
+          "pretty": ""
+        },
+        "warnings": [
+          "{message : DeprecationWarning('ClamsApp.get_configuration() is deprecated. If you are using this method in `_annotate()` method,it is no longer needed since `clams-python>1.0.9`.'), category : 'DeprecationWarning', filename : '/Users/Brenda/Documents/GitHub/app-inaspeechsegmenter-wrapper/app.py', lineno : 22, line : None}",
+          "{message : FutureWarning('arrays to stack must be passed as a \"sequence\" type such as list or tuple. Support for non-sequence iterables such as generators is deprecated as of NumPy 1.16 and will raise an error in the future.'), category : 'FutureWarning', filename : '/Users/Brenda/Library/Python/3.9/lib/python/site-packages/pyannote/algorithms/utils/viterbi.py', lineno : 86, line : None}",
+          "{message : FutureWarning('arrays to stack must be passed as a \"sequence\" type such as list or tuple. Support for non-sequence iterables such as generators is deprecated as of NumPy 1.16 and will raise an error in the future.'), category : 'FutureWarning', filename : '/Users/Brenda/Library/Python/3.9/lib/python/site-packages/pyannote/algorithms/utils/viterbi.py', lineno : 95, line : None}",
+          "{message : RuntimeWarning('invalid value encountered in subtract'), category : 'RuntimeWarning', filename : '/Users/Brenda/Library/Python/3.9/lib/python/site-packages/inaSpeechSegmenter/segmenter.py', lineno : 62, line : None}",
+          "{message : RuntimeWarning('invalid value encountered in subtract'), category : 'RuntimeWarning', filename : '/Users/Brenda/Library/Python/3.9/lib/python/site-packages/numpy/core/_methods.py', lineno : 236, line : None}"
+        ]
+      },
+      "annotations": []
+    }
+  ]
+}
