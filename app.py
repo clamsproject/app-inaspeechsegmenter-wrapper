@@ -10,6 +10,10 @@ import metadata
 
 
 class INASSWrapper(ClamsApp):
+    
+    def __init__(self):
+        super().__init__()
+        self.segmenter = Segmenter()
 
     def _appmetadata(self):
         pass
@@ -18,20 +22,22 @@ class INASSWrapper(ClamsApp):
         if not isinstance(mmif, Mmif):
             mmif = Mmif(mmif)
 
-        # prep ina 
-        ina = Segmenter()
-
+        self.segmenter.energy_ratio = parameters['silenceRatio']
+        
         # get AudioDocuments with locations
         for document in mmif.get_documents_by_type(DocumentTypes.AudioDocument) + mmif.get_documents_by_type(DocumentTypes.VideoDocument):
             filename = document.location_path()
-            segments = ina(filename)
+            self.logger.info(f"Processing {filename}...")
+            segments = self.segmenter(filename)
+            self.logger.info(f"Found {len(segments)} segments.")
 
             v = mmif.new_view()
             self.sign_view(v, parameters)
-            v.new_contain(AnnotationTypes.TimeFrame, timeUnit=metadata.timeunit, document=document.id)
+            v.new_contain(AnnotationTypes.TimeFrame, 
+                          timeUnit=metadata.timeunit, document=document.id, labelset=metadata.wrapper_labels)
             for label, start_sec, end_sec in segments:
                 duration = (end_sec - start_sec) * 1000
-                if duration < parameters['minDuration']:
+                if duration < parameters['minTFDuration']:
                     continue
                 a = v.new_annotation(AnnotationTypes.TimeFrame)
 
@@ -39,9 +45,11 @@ class INASSWrapper(ClamsApp):
                 a.add_property('end', int(end_sec * 1000))
                 if label == 'male' or label == 'female':
                     a.add_property('gender', label)
-                    a.add_property('frameType', 'speech')
+                    a.add_property('label', 'speech')
+                elif label == 'noEnergy': 
+                    a.add_property('label', 'silence')
                 else:
-                    a.add_property('frameType', label)
+                    a.add_property('label', label)
         return mmif
 
 

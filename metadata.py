@@ -10,6 +10,9 @@ from clams.app import ClamsApp
 from clams.appmetadata import AppMetadata
 
 timeunit = 'milliseconds'
+ina_original_labels = 'noEnergy female male noise music'.split()
+wrapper_labels = 'silence speech noise music'.split()
+
 
 # DO NOT CHANGE the function name 
 def appmetadata() -> AppMetadata:
@@ -25,10 +28,16 @@ def appmetadata() -> AppMetadata:
         identifier='inaspeechsegmenter-wrapper'
     )
     metadata.add_input_oneof(DocumentTypes.AudioDocument, DocumentTypes.VideoDocument)
-    metadata.add_output(AnnotationTypes.TimeFrame, timeunit=timeunit)
-    metadata.add_parameter(
-        name='minDuration', type='integer', default=0,
-        description='minimum duration of a TimeFrame in milliseconds')
+    metadata.add_output(AnnotationTypes.TimeFrame, timeunit=timeunit, labelset=wrapper_labels)\
+        .add_description(f'The INA semgmenter uses 5-way classification ({ina_original_labels}) and this wrapper '
+                         f'remaps the labels to {wrapper_labels}, by 1) renaming `noEnergy` to `silence` 2) collapsing '
+                         f'`female` and `male` into `speech` (leaving additional `gender` property). Note that the '
+                         f'time frame annotations do not exhaustively cover the input audio, but only the segments.')
+    metadata.add_parameter(name='minTFDuration', type='integer', default=0,
+                           description='minimum duration of a TimeFrame in milliseconds')
+    metadata.add_parameter(name='silenceRatio', type='integer', default=3,
+                           description='percentage ratio (0-100) of audio energy to to determine silence, ratio to '
+                                       'mean every of the input audio.')
     return metadata
 
 
