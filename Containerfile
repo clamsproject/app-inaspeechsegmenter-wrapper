@@ -1,5 +1,5 @@
 # Use the same base image version as the clams-python python library version
-FROM ghcr.io/clamsproject/clams-python-ffmpeg-tf2:1.2.1
+FROM ghcr.io/clamsproject/clams-python-ffmpeg-tf2:1.3.3
 # See https://github.com/orgs/clamsproject/packages?tab=packages&q=clams-python for more base images
 # IF you want to automatically publish this image to the clamsproject organization, 
 # 1. you should have generated this template without --no-github-actions flag
@@ -17,7 +17,7 @@ ENV CLAMS_APP_VERSION ${CLAMS_APP_VERSION}
 ################################################################################
 # clams-python base images are based on debian distro
 # install more system packages as needed using the apt manager
-RUN apt update && apt install -y ffmpeg libsndfile1
+RUN apt update && apt install -y libsndfile1
 # download keras models to be used by the INA speech segmenter
 ARG u='https://github.com/ina-foss/inaSpeechSegmenter/releases/download/models/'
 ADD ${u}keras_male_female_cnn.hdf5 \
@@ -32,9 +32,6 @@ ADD ${u}keras_male_female_cnn.hdf5 \
 COPY ./ /app
 WORKDIR /app
 RUN python3 -m pip install -r requirements.txt
-# issue with old keras that comes with ina-segmenter (https://github.com/keras-team/keras/issues/14632)
-RUN python3 -m pip uninstall -y keras keras-nightly
-RUN python3 -m pip install --upgrade --force-reinstall $(grep tensorflow requirements.txt)
 
 # default command to run the CLAMS app in a production server 
 CMD ["python3", "app.py", "--production"]

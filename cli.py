@@ -58,6 +58,10 @@ if __name__ == "__main__":
     clamsapp = app.get_app()
     arg_parser = metadata_to_argparser(app_metadata=clamsapp.metadata)
     args = arg_parser.parse_args()
+    for p in clamsapp.metadata.parameters:
+        if p.type == 'boolean':
+            clamsapp.logger.error(p)
+    clamsapp.logger.error(f"Running {clamsapp.metadata.name} with args: {args}")
     if args.IN_MMIF_FILE:
         in_data = args.IN_MMIF_FILE.read()
         # since flask webapp interface will pass parameters as "unflattened" dict to handle multivalued parameters
