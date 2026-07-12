@@ -1,11 +1,11 @@
 # Use the same base image version as the clams-python python library version
-FROM ghcr.io/clamsproject/clams-python-ffmpeg-tf2:1.7.1
+FROM ghcr.io/clamsproject/clams-python-ffmpeg-tf2:1.7.3
 # See https://github.com/orgs/clamsproject/packages?tab=packages&q=clams-python for more base images
-# IF you want to automatically publish this image to the clamsproject organization, 
+# IF you want to automatically publish this image to the clamsproject organization,
 # 1. you should have generated this template without --no-github-actions flag
-# 1. to add arm64 support, change relevant line in .github/workflows/container.yml 
-#     * NOTE that a lots of software doesn't install/compile or run on arm64 architecture out of the box 
-#     * make sure you locally test the compatibility of all software dependencies before using arm64 support 
+# 1. to add arm64 support, set `arm64: true` in .github/workflows/publish.yml
+#     * NOTE that a lots of software doesn't install/compile or run on arm64 architecture out of the box
+#     * make sure you locally test the compatibility of all software dependencies before using arm64 support
 # 1. use a git tag to trigger the github action. You need to use git tag to properly set app version anyway
 
 ################################################################################
@@ -24,15 +24,14 @@ ADD ${u}keras_male_female_cnn.hdf5 \
     ${u}keras_speech_music_cnn.hdf5 \
     ${u}keras_speech_music_noise_cnn.hdf5 \
     /root/.keras/inaSpeechSegmenter/
-
 ################################################################################
 
 ################################################################################
 # main app installation
 COPY ./ /app
 WORKDIR /app
-RUN python3 -m pip install -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt
 
-# default command to run the CLAMS app in a production server 
+# default command to run the CLAMS app in a production server
 CMD ["python3", "app.py", "--production"]
 ################################################################################
